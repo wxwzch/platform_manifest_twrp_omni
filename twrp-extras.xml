@@ -8,14 +8,15 @@
             fetch="https://github.com/LineageOS"
             review="https://review.lineageos.org" />
 
-<!-- TWRP lives in TeamWin android-9.0 -->
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="TeamWin" revision="android-9.0"/>
-    <project path="external/python3" name="android_external_python3" remote="TeamWin" revision="android-9.0"/>
+    <!-- 使用 OmniROM 的 android-5.1 分支，与构建环境匹配 -->
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="omnirom" revision="android-5.1"/>
 
-<!-- Include external LineageOS repos for bash & nano -->
+    <!-- 可选：如果不需要 python3，可以注释掉下面这一行，避免版本冲突 -->
+    <!-- <project path="external/python3" name="android_external_python3" remote="TeamWin" revision="android-9.0"/> -->
+
+    <!-- Include external LineageOS repos for bash & nano -->
     <project name="android_external_bash" path="external/bash" remote="LineageOS" revision="cm-12.1" />
     <project name="android_external_nano" path="external/nano" remote="LineageOS" revision="cm-12.1" />
     <project name="android_external_libncurses" path="external/libncurses" remote="LineageOS" revision="cm-12.1" />
     <project name="android_external_openssh" path="external/openssh" remote="LineageOS" revision="cm-12.1" />
 </manifest>
-
